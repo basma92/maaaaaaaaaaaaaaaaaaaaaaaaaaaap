@@ -1,0 +1,32 @@
+<html>
+ <head>
+ <!-- styles put here, but you can include a CSS file and reference it instead! -->
+     <title>map project</title>
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+          <link href="css/style.css" rel="stylesheet">
+     <body>
+     <div class= "container">
+     <div id = "filteredArray">
+         <h1 id= "title">search for a country</h1>
+         <div id= "input">
+             <input type ="search" placeholder= "search place" data-bind:"textInput: filter">
+         </div>
+         <ui data-bind="forEach: filteredArray">
+         <li >
+             <h2 data-bind="text:title , click: $parent.clickHandler"></h2>
+             </li>
+         </ui>
+         
+         </div>
+   <div id="map"></div>
+     </div>
+             <script src="js/jquery-3.2.1.min.js"> </script>
+         <script src="js/knockout.js"></script>
+         <script src="js/app.js"></script>
+         <script async
+       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT6Z_KyS7TLofTNeg0t1pOsfsBmXwUThY&v=3&callback=initMap">
+   </script>
+ </body>
+</html>
